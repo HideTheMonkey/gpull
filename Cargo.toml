@@ -1,0 +1,9 @@
+[package]
+name = "gpull"
+version = "0.1.0"
+edition = "2021"
+authors = ["HideTheMonkey"]
+
+[dependencies]
+colored = "2.0"
+lazy_static = "1.4"
