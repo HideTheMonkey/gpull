@@ -6,4 +6,4 @@ Now you don't have to worry about your dev environment malfunctioning when someo
 `cargo build --release` will create `./target/release/gpull`
 
 ## Installation
-I recommend putting the `gpull` binary somewhere on your local $PATH and creating an alias like `alias gpl='gpull'` so you can just run `gpl` in your repo.
+I recommend putting the `gpull` binary somewhere on your local $PATH and creating an alias like `alias gpl='gpull'` so you can easitly run `gpl` in whichever repo you want.
