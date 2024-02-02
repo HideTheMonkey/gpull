@@ -2,7 +2,8 @@ use lazy_static::lazy_static;
 use std::path::Path;
 use std::sync::Mutex;
 
-// Lazily initialize the running program's name the first time it's accessed
+// Lazily initialize the running program's name the first time it's accessed.
+// YES it's totally overkill and unnecessary. But I like it.
 lazy_static! {
     static ref PROGRAM_NAME: Mutex<String> = Mutex::new(
         std::env::current_exe()
