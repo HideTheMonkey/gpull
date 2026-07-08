@@ -6,4 +6,3 @@ authors = ["HideTheMonkey"]
 
 [dependencies]
 colored = "2.0"
-lazy_static = "1.4"
