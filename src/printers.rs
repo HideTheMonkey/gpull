@@ -3,7 +3,7 @@ use std::sync::OnceLock;
 
 static PROGRAM_NAME: OnceLock<String> = OnceLock::new();
 
-fn program_name() -> &'static str {
+pub fn program_name() -> &'static str {
     PROGRAM_NAME.get_or_init(|| {
         std::env::current_exe()
             .ok()

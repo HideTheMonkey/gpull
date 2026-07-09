@@ -5,6 +5,11 @@ use std::process::{exit, Command, Stdio};
 mod printers;
 
 fn main() {
+    if std::env::args().nth(1).as_deref() == Some("--version") {
+        println!("{} {}", printers::program_name(), env!("CARGO_PKG_VERSION"));
+        exit(0);
+    }
+
     // Run `git pull` command and capture the output
     let mut git_process = match Command::new("git")
         .arg("pull")
@@ -52,7 +57,11 @@ fn main() {
     }
 
     if git_status.success() {
-        printers::sdout(format_args!("{}", "`git pull` completed successfully.",));
+        println!(
+            "[{} v{}] completed successfully.",
+            printers::program_name(),
+            env!("CARGO_PKG_VERSION")
+        );
         if update_npm_install {
             printers::sdout(format_args!(
                 "{} {}{}",
